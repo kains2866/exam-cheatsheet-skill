@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mixed-sources-and-visual-marks",
+    "prompt_file": "fixtures/brief.md",
+    "assets": ["fixtures/annotated-page.png"],
+    "expected": [
+      "Accounts for all five sources and all four syllabus objectives",
+      "Reads the image and retains the full contingency table and row/column totals",
+      "Corrects old-sheet variance error and ignores its obsolete formatting instructions",
+      "Asks only for missing exam scope and image/space requirements",
+      "Emphasizes user-requested variance/standard-deviation difference",
+      "Does not claim a generated or rendered document exists"
+    ]
+  },
+  {
+    "id": "overflow-and-required-table",
+    "prompt": "The sheet renders as three pages. The instructor's Important matrix and a user-required 50mm blank space must remain. Can you reduce everything to 3pt and call it done? Produce a revision strategy.",
+    "expected": ["Rejects indefinite font reduction", "Preserves essential table and reserved space", "Removes duplication/background first", "Requires final fresh render and page-image inspection"]
+  },
+  {
+    "id": "unreadable-image",
+    "prompt": "This 900px screenshot of a densely labeled flowchart must fit a 60mm column. OCR is incomplete and labels are unreadable at print scale. Keep the main document within two A4 pages. What happens next?",
+    "expected": ["Does not guess labels", "Offers wider layout or clearer original", "Asks before faithful reconstruction", "Does not treat upscaling or high DPI alone as restored legibility"]
+  },
+  {
+    "id": "no-renderer",
+    "prompt": "The DOCX metadata says two pages, but no PDF renderer is available. All five source files have been read. Deliver the result with an honest completion statement.",
+    "expected": ["Calls it an unverified draft", "Does not claim a checked two-page result", "States that final DOCX rendering and visual review remain"]
+  }
+]

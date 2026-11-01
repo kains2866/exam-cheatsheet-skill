@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.cover
+.coverage*
+.DS_Store
+*.docx
+*.pdf
+*.skill
+*.zip
+.venv/
